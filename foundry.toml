@@ -2,6 +2,11 @@
 src = "src"
 out = "out"
 libs = ["lib"]
-remappings=["@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/"]
+remappings = [
+    "@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/",
+]
+
+# Try keep the ffi off as long as possible, this allow foundry to run commands on your machine directly.
+ffi = true # Enable FFI(foreign function interface) for the project. This will generate a C header file for the project.
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
